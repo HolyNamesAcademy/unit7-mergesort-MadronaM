@@ -62,7 +62,7 @@ public class Main {
         //throw new UnsupportedOperationException("sort() has not been implemented yet");
 
 
-
+//return merge(sort(), sort());
 
 
         //int medium = (hi - lo) / 2;
@@ -91,20 +91,32 @@ public class Main {
 
         int range1 = lo;
         int range2 = mid;
-        for(int i = lo; i <= hi; i++){
-            if(range1 < range2){
-                manipulate.add(range1);
+
+        while(range1 < mid || range2 < hi){
+            if(range1 >= mid){
+                manipulate.add(arrayList.get(range2));
+                range2++;
+            }
+            else if(range2 >= hi){
+                manipulate.add(arrayList.get(range1));
                 range1++;
             }
-            else if(range2 < range1){
-                manipulate.add(range2);
-                range2++;
+            else{
+                if(arrayList.get(range1) < arrayList.get(range2)){
+                    manipulate.add(arrayList.get(range1));
+                    range1++;
+                }
+                else if(arrayList.get(range2) < arrayList.get(range1)){
+                    manipulate.add(arrayList.get(range2));
+                    range2++;
+                }
             }
         }
         int j = 0;
-        for(int i = lo; i < hi; i++){
+        for(int i = lo; i < hi; i++) {
             arrayList.set(i, manipulate.get(j));
             j++;
+
         }
     }
 }
