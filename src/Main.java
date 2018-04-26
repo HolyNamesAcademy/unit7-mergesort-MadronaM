@@ -63,6 +63,9 @@ public class Main {
     public static void sort(ArrayList<Integer> arrayList, int lo, int hi) {
         //throw new UnsupportedOperationException("sort() has not been implemented yet");
 
+        if(arrayList.size() == 0 || arrayList.size() == 1){
+            return;
+        }
 
         int mid ;
 
