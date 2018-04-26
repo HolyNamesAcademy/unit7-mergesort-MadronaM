@@ -46,11 +46,9 @@ public class Main {
     public static void mergeSort(ArrayList<Integer> arrayList) {
         //throw new UnsupportedOperationException("mergeSort() has not been implemented yet");
 
-        for(int i = 0; i <= arrayList.size(); i++){
-            sort(arrayList, 0, arrayList.size());
-        }
-
-
+        //for(int i = 0; i <= arrayList.size(); i++){
+        //    sort(arrayList, 0, arrayList.size());
+        //}
     }
 
     /**
@@ -65,17 +63,6 @@ public class Main {
     public static void sort(ArrayList<Integer> arrayList, int lo, int hi) {
         //throw new UnsupportedOperationException("sort() has not been implemented yet");
 
-
-//  ``q`return merge(sort(), sort());
-
-
-        //int medium = (hi - lo) / 2;
-        //if(medium == lo){
-        //    return
-        //}
-        //else{
-        //    return sort(arrayList, lo, medium);
-        //}
 
         int mid ;
 
